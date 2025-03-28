@@ -40,7 +40,22 @@ SELECT user, host FROM mysql.user;
 
 1.4. Дайте все права для пользователя sys_temp. 
 
+```
+
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+```
+
 1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
+
+```
+
+SHOW GRANTS FOR 'sys_temp'@'localhost';
+
+```
+
+![image2](https://github.com/SirSeoPro/11-02/blob/main/2.png)
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
 
