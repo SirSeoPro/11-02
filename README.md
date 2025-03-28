@@ -9,13 +9,12 @@ docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8
 
 
 ```
-Для проверки подключимся к mysql
+B подключимся к mysql
 
 
 ```
 
 docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8
-
 
 ```
 
@@ -23,7 +22,21 @@ docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8
 
 1.2. Создайте учётную запись sys_temp. 
 
+```
+
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
+
+```
+
 1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
+
+```
+
+SELECT user, host FROM mysql.user;
+
+```
+
+![image1](https://github.com/SirSeoPro/11-02/blob/main/1.png)
 
 1.4. Дайте все права для пользователя sys_temp. 
 
