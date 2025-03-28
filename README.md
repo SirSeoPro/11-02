@@ -66,7 +66,10 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
 
 Скачаем архив, разархивируем. </br>
-Выполним, в sql
+
+1.7. Восстановите дамп в базу данных.
+
+Выполним, в sql:
 
 ```
 
@@ -84,9 +87,10 @@ cat /home/ivon/mysql/sakila-db/sakila-schema.sql | docker exec -i mysql8 mysql -
 
 
 ```
-1.7. Восстановите дамп в базу данных.
 
 1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
+
+![image3](https://github.com/SirSeoPro/11-02/blob/main/3.png)
 
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
@@ -97,4 +101,14 @@ cat /home/ivon/mysql/sakila-db/sakila-schema.sql | docker exec -i mysql8 mysql -
 Название таблицы | Название первичного ключа
 customer         | customer_id
 ```
+### Ответ:
 
+```
+SELECT TABLE_NAME, COLUMN_NAME
+FROM information_schema.KEY_COLUMN_USAGE
+WHERE CONSTRAINT_NAME = 'PRIMARY'
+AND TABLE_SCHEMA = 'sakila';
+
+```
+
+![image4](https://github.com/SirSeoPro/11-02/blob/main/4.png)
