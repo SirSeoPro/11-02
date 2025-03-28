@@ -92,6 +92,8 @@ cat /home/ivon/mysql/sakila-db/sakila-schema.sql | docker exec -i mysql8 mysql -
 
 ![image3](https://github.com/SirSeoPro/11-02/blob/main/3.png)
 
+![image5](https://github.com/SirSeoPro/11-02/blob/main/5.png)
+
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
 
 
