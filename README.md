@@ -14,7 +14,7 @@ B подключимся к mysql
 
 ```
 
-docker run --name mysql8 -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql:8
+sudo docker exec -it mysql-server mysql -u root -p
 
 ```
 
