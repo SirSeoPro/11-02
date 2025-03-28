@@ -14,7 +14,7 @@ B подключимся к mysql
 
 ```
 
-sudo docker exec -it mysql-server mysql -u root -p
+sudo docker exec -it mysql8 mysql -u root -p
 
 ```
 
