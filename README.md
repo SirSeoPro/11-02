@@ -83,7 +83,7 @@ USE sakila;
 ```
 
 cat /home/ivon/mysql/sakila-db/sakila-schema.sql | docker exec -i mysql8 mysql -u sys_temp -p'password' sakila
-cat /home/ivon/mysql/sakila-db/sakila-schema.sql | docker exec -i mysql8 mysql -u sys_temp -p'password' sakila
+cat /home/ivon/mysql/sakila-db/sakila-data.sql | docker exec -i mysql8 mysql -u sys_temp -p'password' sakila
 
 
 ```
